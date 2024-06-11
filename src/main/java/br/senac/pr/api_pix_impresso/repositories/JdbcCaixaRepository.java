@@ -1,5 +1,5 @@
-package br.senac.pr.api_pix_impresso.repositories;
 
+package br.senac.pr.api_pix_impresso.repositories;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +19,8 @@ public class JdbcCaixaRepository implements CaixaRepository {
   private JdbcTemplate jdbcTemplate;
   private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-  public JdbcCaixaRepository(JdbcTemplate jdbcTemplate, NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+  public JdbcCaixaRepository(JdbcTemplate jdbcTemplate,
+      NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
     this.jdbcTemplate = jdbcTemplate;
     this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
   }
