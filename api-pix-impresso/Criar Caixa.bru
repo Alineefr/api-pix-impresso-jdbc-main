@@ -1,3 +1,4 @@
+
 meta {
   name: Criar Caixa
   type: http
@@ -6,6 +7,21 @@ meta {
 
 post {
   url: http://localhost:8080/caixas
-  body: none
+  body: json
   auth: none
+}
+
+headers {
+  : 
+}
+
+body:json {
+  {
+    "localizacao": "planalto",
+    "saldo": 500
+  }
+}
+
+body:text {
+  teste  
 }

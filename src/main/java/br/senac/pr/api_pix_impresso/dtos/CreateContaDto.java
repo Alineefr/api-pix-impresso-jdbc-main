@@ -1,9 +1,7 @@
+package br.senac.pr.api_pix_impresso.dtos;
 
-package br.senac.pr.api_pix_impresso.models;
- 
-public class Conta {
-  // Criar os atributos para a tabela Conta
-  private Long id;
+public class CreateContaDto {
+    
   private Long agencia;
   private Long numeroConta;
   private Long digitoVerificador;
@@ -13,11 +11,8 @@ public class Conta {
   private String numeroCartao;
   private String senha;
   private long saldo;
-  // Criar um método construtor com todos os atributos
-  // Criar os getters e setters
-public Conta(Long id, Long agencia, Long numeroConta, Long digitoVerificador, String nome, String cPF, long tipoConta,
+public CreateContaDto(Long agencia, Long numeroConta, Long digitoVerificador, String nome, String cPF, long tipoConta,
         String numeroCartao, String senha, long saldo) {
-    this.id = id;
     this.agencia = agencia;
     this.numeroConta = numeroConta;
     this.digitoVerificador = digitoVerificador;
@@ -27,12 +22,6 @@ public Conta(Long id, Long agencia, Long numeroConta, Long digitoVerificador, St
     this.numeroCartao = numeroCartao;
     this.senha = senha;
     this.saldo = saldo;
-}
-public Long getId() {
-    return id;
-}
-public void setId(Long id) {
-    this.id = id;
 }
 public Long getAgencia() {
     return agencia;
@@ -88,5 +77,8 @@ public long getSaldo() {
 public void setSaldo(long saldo) {
     this.saldo = saldo;
 }
- 
+
+
+  
 }
+

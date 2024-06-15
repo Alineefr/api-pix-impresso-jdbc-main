@@ -31,6 +31,10 @@ public class CaixaService {
     return caixaRepository.findAll();
   }
 
+  public void updateSaldoCaixa(Caixa caixa) {
+    caixaRepository.update(caixa);
+  }
+
   public int update(Caixa caixa) {
     if (caixa == null) {
       throw new Error("Dados do caixa inválidos");
@@ -43,4 +47,12 @@ public class CaixaService {
     return caixaRepository.update(caixa);
   }
 
+  public Caixa findById(Long id) {
+    return caixaRepository.findById(id).orElse(null);
+  }
+
+
+  public void deleteById(Long id) {
+    caixaRepository.deleteById(id);
+  }
 }
