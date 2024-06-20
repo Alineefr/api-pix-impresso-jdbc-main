@@ -72,7 +72,7 @@ public class JdbcContaRepository implements BaseJdbcRepository<Conta, Long> {
   }
 
   @Override 
-  public int update(Conta conta) {
+  public void update(Conta conta) {
     String sql = """
         UPDATE CONTAS SET AGENCIA = :agencia,
         NUMERO_CONTA = :numero_conta, 
@@ -97,7 +97,7 @@ public class JdbcContaRepository implements BaseJdbcRepository<Conta, Long> {
         params.put("saldo", conta.getSaldo());  
    namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource(params)); 
    
-   return 1;
+ 
 
   }
 
