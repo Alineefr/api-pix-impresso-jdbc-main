@@ -14,7 +14,7 @@ public class CreateContaToContaMapper implements Function<CreateContaDto, Conta>
   public Conta apply(CreateContaDto dto) {
     return new Conta(null, dto.getAgencia(), dto.getNumeroConta(),
         dto.getDigitoVerificador(), dto.getNome(),
-        dto.getCPF(), dto.getTipoConta(), dto.getNumeroCartao(),
+        dto.getCpf(), dto.getTipoConta(), dto.getNumeroCartao(),
         dto.getSenha(), dto.getSaldo());
   }
 

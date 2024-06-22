@@ -19,12 +19,12 @@ import org.springframework.stereotype.Repository;
 import br.senac.pr.api_pix_impresso.models.Conta;
 
 @Repository
-public class JdbcContaRepository implements BaseJdbcRepository<Conta, Long> {
+public class JdbcTemplateContaRepository implements BaseJdbcRepository<Conta, Long> {
 
   private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
   private JdbcTemplate jdbcTemplate;
 
-  public JdbcContaRepository(NamedParameterJdbcTemplate namedParameterJdbcTemplate,
+  public JdbcTemplateContaRepository(NamedParameterJdbcTemplate namedParameterJdbcTemplate,
       JdbcTemplate jdbcTemplate) {
     this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
     this.jdbcTemplate = jdbcTemplate;
@@ -132,14 +132,8 @@ public class JdbcContaRepository implements BaseJdbcRepository<Conta, Long> {
 
   @Override
   public int deleteById(Long id) {
-    String sql = "delete from  public.contas where id = :id";
- 
-    Map<String, Object> params = new HashMap<>();
-    params.put("id", id);
- 
-    // Executar a instrução SQL para criar um novo registro
-    namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource(params));
-    return 1;
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'deleteById'");
   }
 
   @Override

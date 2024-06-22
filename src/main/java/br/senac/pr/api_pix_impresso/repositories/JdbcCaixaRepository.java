@@ -71,6 +71,7 @@ public class JdbcCaixaRepository implements BaseJdbcRepository<Caixa, Long> {
 
     // Executar a instrução SQL para criar um novo registro
     namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource(params));
+    
   }
 
   @Override

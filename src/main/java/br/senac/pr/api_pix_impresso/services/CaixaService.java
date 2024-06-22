@@ -44,7 +44,7 @@ public class CaixaService implements BaseService<Caixa, Long> {
       throw new Error("ID do caixa inválido");
     }
     // TODO - Finalizar o método update no repository
-   
+
   }
 
   public Caixa findById(Long id) {

@@ -18,7 +18,6 @@ import br.senac.pr.api_pix_impresso.dtos.DetailContaDto;
 import br.senac.pr.api_pix_impresso.dtos.UpdateContaCadastroDto;
 import br.senac.pr.api_pix_impresso.dtos.UpdateContaDto;
 import br.senac.pr.api_pix_impresso.dtos.UpdateContaSaldoDto;
-import br.senac.pr.api_pix_impresso.models.Caixa;
 import br.senac.pr.api_pix_impresso.models.Conta;
 import br.senac.pr.api_pix_impresso.services.impl.ContaServiceImpl;
 
@@ -79,12 +78,11 @@ public class ContaController {
       // retorna o objeto conta
     return ResponseEntity.ok().build();  
     }
-
-// DELETE - Deleta uma conta
-@DeleteMapping("{id}")
-public ResponseEntity<String> deleteConta(@PathVariable Long id) {
-contaService.deleteById(id);
- return ResponseEntity.ok().build();
- 
-}
+   
+  // DELETE - Deleta uma conta
+  @DeleteMapping("/{id}")
+  public ResponseEntity<String> deleteConta(@PathVariable Long id) {
+    contaService.deleteById(id);
+    return ResponseEntity.ok().build();
+  }
 }
